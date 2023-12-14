@@ -50,7 +50,7 @@ public class DatosEnemigos : MonoBehaviour
         if (other.CompareTag("ArmaPlayer"))
         {
             Debug.Log("He tocado un arma");
-            float danio = datoJugador.danio;
+            float danio = datoJugador.daño;
             recibirDanio(danio);
         }
     }
