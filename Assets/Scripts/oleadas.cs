@@ -5,26 +5,24 @@ using UnityEngine;
 public class oleadas : MonoBehaviour
 {
     public enum wState {siguiente, max};
-
     public wState wave = wState.siguiente;
     
     public GameObject[] sp;
+
     void Start()
     {
         sp = GameObject.FindGameObjectsWithTag("Spawners");
-        for(int i = 0; i < sp.Length; i++){
-
+        for(int i = 0; i < sp.Length; i++)
+        {
             sp[i].SetActive(false);
-
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0){
-           
-                sp[(int) wState.siguiente].SetActive(true);
+        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0)
+        {
+            sp[(int) wState.siguiente].SetActive(true);
 
            /*for(int i = 0; i < waves; i++){
                 Debug.Log("prueba " + i);
