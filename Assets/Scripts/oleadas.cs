@@ -20,7 +20,7 @@ public class oleadas : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && wave != wState.max)
+        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0)
         {
             sp[(int) wave].SetActive(true);
             wave++;
