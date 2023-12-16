@@ -6,10 +6,12 @@ public class oleadas : MonoBehaviour
 {
     public enum wState {siguiente, max};
     public wState wave = wState.siguiente;
+
+    private float timeout;
     
     public GameObject[] sp;
 
-    private bool flag = true; 
+    //private bool flag = true; 
     private BoxCollider portalCollider;
     public GameObject cofrePrefab;
 
@@ -30,15 +32,18 @@ public class oleadas : MonoBehaviour
 
     void Update()
     {
-        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0)
+        if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && wave != wState.max)
         {
             sp[(int) wave].SetActive(true);
             wave++;
+            timeout = 5;
+            
         }
-        if (wave == wState.max && flag) 
+        timeout -= Time.deltaTime;
+        if (wave == wState.max && GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && timeout <= 0) 
         {
             generarCofre();
-            flag = false;
+            //flag = false;
             Debug.Log("Estado en max");
         }
     }
@@ -48,6 +53,6 @@ public class oleadas : MonoBehaviour
         portalCollider.isTrigger = true;
         GameObject cofre = Instantiate(cofrePrefab);
         cofre.transform.position = new Vector3(-270, 0.5f, 50);
-        flag = false;
+        //flag = false;
     }
 }
