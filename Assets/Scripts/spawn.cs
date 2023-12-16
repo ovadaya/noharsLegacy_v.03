@@ -25,7 +25,7 @@ public class spawn : MonoBehaviour
      void spawnE(){
         
             
-            GameObject enemyClone = Instantiate(enemytype, transform);
+            GameObject enemyClone = Instantiate(enemytype, transform.position, Quaternion.identity);
        
 
     }
