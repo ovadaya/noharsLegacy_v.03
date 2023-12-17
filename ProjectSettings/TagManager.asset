@@ -10,6 +10,7 @@ TagManager:
   - ArmaPlayer
   - Spawners
   - Portal
+  - Cofre
   layers:
   - Default
   - TransparentFX

@@ -11,8 +11,10 @@ public class oleadas : MonoBehaviour
     
     public GameObject[] sp;
 
-    //private bool flag = true; 
+    private bool flag = true; 
     private BoxCollider portalCollider;
+    private CapsuleCollider cofreCollider1;
+    private BoxCollider cofreCollider2;
     public GameObject cofrePrefab;
 
     void Start()
@@ -21,6 +23,13 @@ public class oleadas : MonoBehaviour
         if (portal != null)
         {
             portalCollider = portal.GetComponent<BoxCollider>();
+        }
+
+        GameObject cofre = GameObject.FindGameObjectWithTag("Cofre");
+        if (cofre != null)
+        {
+            cofreCollider1 = cofre.GetComponent<CapsuleCollider>();
+            cofreCollider2 = cofre.GetComponent<BoxCollider>();
         }
 
         sp = GameObject.FindGameObjectsWithTag("Spawners");
@@ -40,19 +49,17 @@ public class oleadas : MonoBehaviour
             
         }
         timeout -= Time.deltaTime;
-        if (wave == wState.max && GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && timeout <= 0) 
+        if (wave == wState.max && GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && timeout <= 0 && flag) 
         {
-            generarCofre();
-            //flag = false;
-            Debug.Log("Estado en max");
+            activarColliders();
+            flag = false;
         }
     }
 
-    private void generarCofre()
+    private void activarColliders()
     {
         portalCollider.isTrigger = true;
-        GameObject cofre = Instantiate(cofrePrefab);
-        cofre.transform.position = new Vector3(-270, 0.5f, 50);
-        //flag = false;
+        cofreCollider1.isTrigger = true;
+        cofreCollider2.isTrigger = true;
     }
 }
