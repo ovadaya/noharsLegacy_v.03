@@ -24,7 +24,7 @@ public class RecogerObjeto : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cercaDelObjeto = true;
-            AjustarTamaño();
+            AjustarTamanio();
         }
     }
 
@@ -33,7 +33,7 @@ public class RecogerObjeto : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cercaDelObjeto = false;
-            RestaurarTamaño();
+            RestaurarTamanio();
         }
     }
 
@@ -47,12 +47,12 @@ public class RecogerObjeto : MonoBehaviour
         }
     }
 
-    void AjustarTamaño()
+    void AjustarTamanio()
     {
         transform.localScale = escalaOriginal * escalaTamanyo;
     }
 
-    void RestaurarTamaño()
+    void RestaurarTamanio()
     {
         transform.localScale = escalaOriginal;
     }

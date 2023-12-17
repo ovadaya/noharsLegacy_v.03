@@ -9,13 +9,13 @@ public class DatosJugador : MonoBehaviour
     public float vidaJugadorInicial;
     private float vidaActual;
     public Slider barraVidaJugador;
-    public float daño;
+    public float danio;
 
     private GameObject armaPlayer;
     private BoxCollider armaPlayerCollider;
 
     private int numPocionesVida;
-    private int numPocionesDaño;
+    private int numPocionesDanio;
 
     public TMPro.TextMeshProUGUI textoPocionesVida;
 
@@ -42,7 +42,7 @@ public class DatosJugador : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            usarPocionDaño();
+            usarPocionDanio();
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -92,10 +92,10 @@ public class DatosJugador : MonoBehaviour
         numPocionesVida++;
     }
 
-    public void addPocionDaño()
+    public void addPocionDanio()
     {
-        //textoPocionesDaño.color = Color.white;
-        numPocionesDaño++;
+        //textoPocionesDanio.color = Color.white;
+        numPocionesDanio++;
     }
 
     private void restarPocionVida()
@@ -103,9 +103,9 @@ public class DatosJugador : MonoBehaviour
         numPocionesVida--;
     }
 
-    private void restarPocionDaño()
+    private void restarPocionDanio()
     {
-        numPocionesDaño--;
+        numPocionesDanio--;
     }
 
     private void usarPocionVida()
@@ -125,13 +125,13 @@ public class DatosJugador : MonoBehaviour
         }
     }
 
-    private void usarPocionDaño()
+    private void usarPocionDanio()
     {
-        if (numPocionesDaño > 0)
+        if (numPocionesDanio > 0)
         {
-            restarPocionDaño();
-            daño = daño * 2;
-            StartCoroutine(EsperarYRestaurarDaño());
+            restarPocionDanio();
+            danio = danio * 2;
+            StartCoroutine(EsperarYRestaurarDanio());
         }
         else
         {
@@ -139,10 +139,10 @@ public class DatosJugador : MonoBehaviour
         }
     }
 
-    IEnumerator EsperarYRestaurarDaño()
+    IEnumerator EsperarYRestaurarDanio()
     {
         yield return new WaitForSeconds(2f);
-        daño = daño / 2;
+        danio = danio / 2;
     }
 
     public void finalAniAtack()
