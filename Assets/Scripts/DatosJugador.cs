@@ -17,7 +17,13 @@ public class DatosJugador : MonoBehaviour
     private int numPocionesVida;
     private int numPocionesDanio;
 
+    private int numLlaves;
+
     public TMPro.TextMeshProUGUI textoPocionesVida;
+
+    public TMPro.TextMeshProUGUI textoPocionesDanio;
+
+    public TMPro.TextMeshProUGUI textoLlaves;
 
     public GameObject panelGameOver;
     public Animator animator;
@@ -35,6 +41,8 @@ public class DatosJugador : MonoBehaviour
     {
         barraVidaJugador.value = vidaActual;
         textoPocionesVida.text = numPocionesVida.ToString();
+        textoPocionesDanio.text = numPocionesDanio.ToString();
+        textoLlaves.text = numLlaves.ToString();
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -94,8 +102,13 @@ public class DatosJugador : MonoBehaviour
 
     public void addPocionDanio()
     {
-        //textoPocionesDanio.color = Color.white;
+        textoPocionesDanio.color = Color.white;
         numPocionesDanio++;
+    }
+
+    public void addKey()
+    {
+        if(numLlaves == 0) numLlaves++;
     }
 
     private void restarPocionVida()
@@ -135,7 +148,7 @@ public class DatosJugador : MonoBehaviour
         }
         else
         {
-            textoPocionesVida.color = Color.red;
+            textoPocionesDanio.color = Color.red;
         }
     }
 

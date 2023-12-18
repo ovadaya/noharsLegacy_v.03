@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PocionDaño : MonoBehaviour
+public class PocionDanio : MonoBehaviour
 {
     private DatosJugador datoJugador;
 
@@ -11,7 +11,7 @@ public class PocionDaño : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             datoJugador = other.GetComponent<DatosJugador>();
-            datoJugador.addPocionDaño();
+            datoJugador.addPocionDanio();
             Destroy(gameObject);
         }
     }

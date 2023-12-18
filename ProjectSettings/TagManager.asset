@@ -11,6 +11,7 @@ TagManager:
   - Spawners
   - Portal
   - Cofre
+  - Llave
   layers:
   - Default
   - TransparentFX
