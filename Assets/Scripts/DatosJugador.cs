@@ -96,14 +96,18 @@ public class DatosJugador : MonoBehaviour
 
     public void addPocionVida()
     {
-        textoPocionesVida.color = Color.white;
-        numPocionesVida++;
+        if(numPocionesVida == 0) {
+            textoPocionesVida.color = Color.white;
+            numPocionesVida++;
+        }
     }
 
     public void addPocionDanio()
     {
-        textoPocionesDanio.color = Color.white;
-        numPocionesDanio++;
+        if(numPocionesDanio == 0) {
+            textoPocionesDanio.color = Color.white;
+            numPocionesDanio++;
+        }
     }
 
     public void addKey()
