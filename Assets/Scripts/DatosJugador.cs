@@ -17,7 +17,7 @@ public class DatosJugador : MonoBehaviour
     private int numPocionesVida;
     private int numPocionesDanio;
 
-    private int numLlaves;
+    public int numLlaves;
 
     public TMPro.TextMeshProUGUI textoPocionesVida;
 
@@ -58,12 +58,14 @@ public class DatosJugador : MonoBehaviour
             armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
             armaPlayerCollider.enabled = true;
         }
+        
         else if (Input.GetMouseButtonUp(0))
         {
             animator.SetBool("IsAtacking", false);
             armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
             armaPlayerCollider.enabled = false;
         }
+        
     }
 
     public void recibirDano(float dmg)

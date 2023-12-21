@@ -77,6 +77,7 @@ public class ThirdPersonMovement : MonoBehaviour
     void Jump()
     {
         animator.SetBool("IsWalking", false);
+        animator.SetBool("isJumping", true);
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 
@@ -92,6 +93,7 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 Jump();
                 isJumping = false;
+                animator.SetBool("isJumping", false);
             }
         }
 
