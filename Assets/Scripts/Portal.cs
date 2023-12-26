@@ -13,8 +13,8 @@ public class Portal : MonoBehaviour
             datoJugador = other.GetComponent<DatosJugador>();
             if(datoJugador.numLlaves > 0)
             {
-                //UnityEditor.EditorApplication.isPlaying = false;
-                Application.Quit();
+                UnityEditor.EditorApplication.isPlaying = false;
+                //Application.Quit();
             }
         }
     }
