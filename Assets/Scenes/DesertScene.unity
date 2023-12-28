@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.012
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012375371, g: 0.010873491, b: 0.035237595, a: 0.012}
+  m_IndirectSpecularColor: {r: 0.012371175, g: 0.010866432, b: 0.035227764, a: 0.012}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -5560,7 +5560,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654185694}
-  m_LocalRotation: {x: 0.16018222, y: -0.000000025470568, z: 0.0000000041333035, w: 0.9870875}
+  m_LocalRotation: {x: 0.16018222, y: 0.000000025470568, z: -0.0000000041333035, w: 0.9870875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12214,19 +12214,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5076484507258936684, guid: 920356f276439ec449a8f508be46af44, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -1.7314492e+11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5076484507258936684, guid: 920356f276439ec449a8f508be46af44, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 3.576551e+35
+      value: 1.02e-43
       objectReference: {fileID: 0}
     - target: {fileID: -5076484507258936684, guid: 920356f276439ec449a8f508be46af44, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 8.53e-43
       objectReference: {fileID: 0}
     - target: {fileID: -5076484507258936684, guid: 920356f276439ec449a8f508be46af44, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0.000003851393
+      value: 1.1166e-41
       objectReference: {fileID: 0}
     - target: {fileID: -2764512629625626004, guid: 920356f276439ec449a8f508be46af44, type: 3}
       propertyPath: m_NavMeshLayer
@@ -15213,6 +15213,10 @@ PrefabInstance:
     - target: {fileID: 3052709811029749500, guid: ebfa42b7f9e20394991c430105a9bfe1, type: 3}
       propertyPath: "da\xF1o"
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052709811029749500, guid: ebfa42b7f9e20394991c430105a9bfe1, type: 3}
+      propertyPath: rango
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3052709811029749500, guid: ebfa42b7f9e20394991c430105a9bfe1, type: 3}
       propertyPath: animator

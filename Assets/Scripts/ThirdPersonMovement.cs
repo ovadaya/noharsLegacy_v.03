@@ -33,7 +33,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
         Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
-        // Lógica de salto
         if (controller.isGrounded)
         {
             velocity.y = -2f; // Resetea la velocidad vertical cuando está en el suelo
@@ -42,12 +41,11 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 isJumping = true;
             }
+            else { isJumping = false; }
         }
 
-        // Lógica de movimiento
         MovePlayer(direction);
 
-        // Aplicar gravedad
         ApplyGravity();
     }
 
@@ -55,8 +53,10 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (direction.magnitude >= 0.1f)
         {
+            animator.SetBool("IsWalking", true);
             animator.SetBool("IsAtacking", false);
-            animator.SetBool("IsWalking", true);    
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsEmpujando", false);
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -71,12 +71,15 @@ public class ThirdPersonMovement : MonoBehaviour
         else
         {
             animator.SetBool("IsWalking", false);
+            animator.SetBool("IsJumping", false);
         }
     }
 
     void Jump()
     {
         animator.SetBool("IsWalking", false);
+        animator.SetBool("IsAtacking", false);
+        animator.SetBool("IsEmpujando", false);
         animator.SetBool("isJumping", true);
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
@@ -93,7 +96,6 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 Jump();
                 isJumping = false;
-                animator.SetBool("isJumping", false);
             }
         }
 

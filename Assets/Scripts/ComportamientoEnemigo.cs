@@ -36,6 +36,7 @@ public class ComportamientoEnemigo : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        /*
         if (other.CompareTag("Player"))
         {
             if (Input.GetKeyDown(KeyCode.F) && !isPushed)
@@ -48,11 +49,20 @@ public class ComportamientoEnemigo : MonoBehaviour
             }
         }
         else
-        {
+        {*/
             isPushed = false;
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
 
-        }
+        //}
+    }
+
+    public void pushear()
+    {
+        isPushed = true;
+        Vector3 direccionAlJugador = (target.position - transform.position);
+        direccionAlJugador.y = 0f;
+        direccionAlJugador.Normalize();
+        rb.AddForce(-direccionAlJugador * 400f, ForceMode.Impulse);
     }
 }

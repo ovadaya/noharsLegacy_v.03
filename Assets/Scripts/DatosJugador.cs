@@ -11,6 +11,7 @@ public class DatosJugador : MonoBehaviour
     public Slider barraVidaJugador;
     public float danio;
 
+    public float rango;
     private GameObject armaPlayer;
     private BoxCollider armaPlayerCollider;
 
@@ -20,9 +21,7 @@ public class DatosJugador : MonoBehaviour
     public int numLlaves;
 
     public TMPro.TextMeshProUGUI textoPocionesVida;
-
     public TMPro.TextMeshProUGUI textoPocionesDanio;
-
     public TMPro.TextMeshProUGUI textoLlaves;
 
     public GameObject panelGameOver;
@@ -52,26 +51,44 @@ public class DatosJugador : MonoBehaviour
         {
             usarPocionDanio();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            PushearEnemigos();
+        }
+        if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.F) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.Space))
         {
             animator.SetBool("IsAtacking", true);
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsEmpujando", false);
+
             armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
             armaPlayerCollider.enabled = true;
         }
-        
-        else if (Input.GetMouseButtonUp(0))
+    }
+
+    void PushearEnemigos()
+    {
+        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("MeleeEnemy");
+
+        foreach (GameObject enemigo in enemigos)
         {
-            animator.SetBool("IsAtacking", false);
-            armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
-            armaPlayerCollider.enabled = false;
+            float distancia = Vector3.Distance(transform.position, enemigo.transform.position);
+            if (distancia <= rango)
+            {
+                ComportamientoEnemigo comportamientoEnemigo = enemigo.GetComponent<ComportamientoEnemigo>();
+
+                if (comportamientoEnemigo != null)
+                {
+                    comportamientoEnemigo.pushear();
+                }
+            }
         }
-        
     }
 
     public void recibirDano(float dmg)
     {
         vidaActual -= dmg;
-        Debug.Log(vidaActual);
 
         if (vidaActual <= 0)
         {
@@ -169,6 +186,11 @@ public class DatosJugador : MonoBehaviour
         animator.SetBool("IsAtacking", false);
         armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
         armaPlayerCollider.enabled = false;
+    }
+
+    public void finalAniJump()
+    {
+        animator.SetBool("IsJumping", false);
     }
 }
 

@@ -30,7 +30,6 @@ public class Edanyo : MonoBehaviour
             {
                 datoJugador.recibirDano(15);
                 tiempoSiguienteDano = tiempoEntreDano;
-                Debug.Log("Danio aplicado.");
             }
         }
     }
