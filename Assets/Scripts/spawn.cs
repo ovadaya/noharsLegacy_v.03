@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
-    [SerializeField] private int cantidade;
+    private int cantidade = 1;
     [SerializeField] private GameObject enemytype;
 
     void Update()

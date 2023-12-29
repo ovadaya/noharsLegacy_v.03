@@ -43,7 +43,9 @@ public class oleadas : MonoBehaviour
     {
         if(GameObject.FindGameObjectsWithTag("MeleeEnemy").Length <= 0 && wave != wState.max)
         {
-            sp[(int) wave].SetActive(true);
+            for(int i = 0; i < sp.Length; i++){
+                sp[i].SetActive(true);
+            }
             wave++;
             timeout = 5;
             
