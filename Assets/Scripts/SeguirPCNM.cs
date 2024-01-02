@@ -6,6 +6,8 @@ public class SeguirPCNM : MonoBehaviour
 {
     public NavMeshAgent agent;
     private Transform target;
+
+    [SerializeField] private Vector3 limite;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class SeguirPCNM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        agent.SetDestination(target.position-limite);
     }
 }
