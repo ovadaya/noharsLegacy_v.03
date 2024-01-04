@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuInicial.unity
     guid: cf9dbc60854d54bb2a2b730fee0b16bf
   - enabled: 1
+    path: Assets/Scenes/Animatica.unity
+    guid: e7348b7da43984644baf9aeaee0f0bb4
+  - enabled: 1
     path: Assets/Scenes/DesertScene.unity
     guid: 53f5a0914b195b74abc2fb43a9e2ce22
   - enabled: 0

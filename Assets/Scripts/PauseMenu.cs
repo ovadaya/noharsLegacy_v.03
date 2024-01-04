@@ -6,9 +6,28 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PausePanel;
 
+    public GameObject infoPanel;
+
     void Start()
     {
         PausePanel.SetActive(false);
+
+        infoPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void StartGame()
+    {
+        infoPanel.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
