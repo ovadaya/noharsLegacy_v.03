@@ -18,6 +18,9 @@ public class DatosJugador : MonoBehaviour
     private int numPocionesVida;
     private int numPocionesDanio;
 
+    public GameObject lifePotionSign;
+    public GameObject damagePotionSign;
+
     public int numLlaves;
 
     public TMPro.TextMeshProUGUI textoPocionesVida;
@@ -34,6 +37,9 @@ public class DatosJugador : MonoBehaviour
         numPocionesVida = 0;
         panelGameOver.SetActive(false);
         armaPlayer = GameObject.FindWithTag("ArmaPlayer");
+
+        lifePotionSign.SetActive(false);
+        damagePotionSign.SetActive(false);
     }
 
     private void Update()
@@ -120,6 +126,8 @@ public class DatosJugador : MonoBehaviour
         if(numPocionesVida == 0) {
             textoPocionesVida.color = Color.white;
             numPocionesVida++;
+
+            lifePotionSign.SetActive(true);
         }
     }
 
@@ -128,6 +136,8 @@ public class DatosJugador : MonoBehaviour
         if(numPocionesDanio == 0) {
             textoPocionesDanio.color = Color.white;
             numPocionesDanio++;
+
+            damagePotionSign.SetActive(true);
         }
     }
 
@@ -139,11 +149,15 @@ public class DatosJugador : MonoBehaviour
     private void restarPocionVida()
     {
         numPocionesVida--;
+
+        lifePotionSign.SetActive(false);
     }
 
     private void restarPocionDanio()
     {
         numPocionesDanio--;
+
+        damagePotionSign.SetActive(false);
     }
 
     private void usarPocionVida()
