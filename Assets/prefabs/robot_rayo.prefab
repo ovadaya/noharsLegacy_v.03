@@ -100,8 +100,78 @@ PrefabInstance:
       propertyPath: m_Name
       value: robot_rayo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+      propertyPath: m_TagString
+      value: enemigoCyclope
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2203435176113824573}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3458152961572380145}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5611040328363773445}
   m_SourcePrefab: {fileID: 100100000, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+--- !u!1 &1191019929551708771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
+  m_PrefabInstance: {fileID: 2037372511269297970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2203435176113824573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191019929551708771}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f00e4c50f3154a46afb28ea883b1b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  danoEnemigo: 5
+  vidaEnemigo: 100
+  barraVidaEnemigo: {fileID: 0}
+  tiempoEntreDano: 2
+--- !u!114 &-3458152961572380145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191019929551708771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d1994c4cdc45a4aaf5c8a1c3ff7e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: -5611040328363773445}
+  limite: {x: 5, y: 0, z: 5}
+--- !u!195 &-5611040328363773445
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191019929551708771}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

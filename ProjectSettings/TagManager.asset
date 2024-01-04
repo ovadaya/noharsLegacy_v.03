@@ -12,6 +12,7 @@ TagManager:
   - Portal
   - Cofre
   - Llave
+  - enemigoCyclope
   layers:
   - Default
   - TransparentFX
