@@ -88,7 +88,6 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (!controller.isGrounded)
         {
-            animator.SetBool("IsJumping", true);
             velocity.y += gravity * Time.deltaTime;
         }
         else

@@ -33,16 +33,16 @@ public class DatosEnemigos : MonoBehaviour
         barraVidaEnemigo.value = vidaActualEnemigo;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ArmaPlayer"))
         {
-            if (Time.deltaTime - tiempoUltimoDanio >= tiempoEntreTicks)
-            {
+            //if (Time.deltaTime - tiempoUltimoDanio >= tiempoEntreTicks)
+            //{
                 float danio = datoJugador.danio;
                 recibirDanio(danio);
                 tiempoUltimoDanio = Time.deltaTime;
-            }
+            //}
         }
     }
 

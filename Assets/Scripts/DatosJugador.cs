@@ -51,9 +51,12 @@ public class DatosJugador : MonoBehaviour
         {
             usarPocionDanio();
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.Space))
         {
-            PushearEnemigos();
+            animator.SetBool("IsAtacking", false);
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsEmpujando", true);
         }
         if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.F) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.Space))
         {
@@ -66,7 +69,7 @@ public class DatosJugador : MonoBehaviour
         }
     }
 
-    void PushearEnemigos()
+    public void PushearEnemigos()
     {
         GameObject[] enemigos = GameObject.FindGameObjectsWithTag("MeleeEnemy");
 
@@ -190,6 +193,12 @@ public class DatosJugador : MonoBehaviour
     public void finalAniJump()
     {
         animator.SetBool("IsJumping", false);
+    }
+
+    public void finalAniPushear()
+    {
+        Debug.Log("Llamada a la funcion");
+        animator.SetBool("IsEmpujando", false);
     }
 }
 
