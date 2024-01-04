@@ -61,7 +61,6 @@ public class DatosJugador : MonoBehaviour
             animator.SetBool("IsWalking", false);
             animator.SetBool("IsJumping", false);
             animator.SetBool("IsEmpujando", false);
-
             armaPlayerCollider = armaPlayer.GetComponent<BoxCollider>();
             armaPlayerCollider.enabled = true;
         }

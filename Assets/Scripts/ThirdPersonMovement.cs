@@ -80,7 +80,7 @@ public class ThirdPersonMovement : MonoBehaviour
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsAtacking", false);
         animator.SetBool("IsEmpujando", false);
-        animator.SetBool("isJumping", true);
+        animator.SetBool("IsJumping", true);
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 
@@ -88,6 +88,7 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (!controller.isGrounded)
         {
+            animator.SetBool("IsJumping", true);
             velocity.y += gravity * Time.deltaTime;
         }
         else
@@ -98,7 +99,6 @@ public class ThirdPersonMovement : MonoBehaviour
                 isJumping = false;
             }
         }
-
         controller.Move(velocity * Time.deltaTime);
     }
 }
