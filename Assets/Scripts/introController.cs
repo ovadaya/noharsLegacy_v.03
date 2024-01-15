@@ -15,4 +15,12 @@ public class introController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 
+    void Update()
+    {
+        if (Input.anyKey)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }
+    }
+
 }

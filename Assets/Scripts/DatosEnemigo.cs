@@ -30,7 +30,9 @@ public class DatosEnemigos : MonoBehaviour
     private void Update()
     {
         tiempoSiguienteDano -= 10;
-        barraVidaEnemigo.value = vidaActualEnemigo;
+        if(barraVidaEnemigo != null) {
+            barraVidaEnemigo.value = vidaActualEnemigo;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
