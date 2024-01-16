@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject infoPanel;
 
+    public GameObject gameOverPanel;
+
     void Start()
     {
         PausePanel.SetActive(false);
@@ -41,7 +43,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
         }
 
-        if (infoPanel.activeSelf || PausePanel.activeSelf)
+        if (infoPanel.activeSelf || PausePanel.activeSelf || gameOverPanel.activeSelf )
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
