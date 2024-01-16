@@ -8,6 +8,7 @@ public class cofre : MonoBehaviour
     public Animator ani;
     private BoxCollider cubo;
     private CapsuleCollider capsula;
+    [SerializeField] private AudioClip sonido;
 
     public GameObject key;
     private GameObject jugador;
@@ -36,6 +37,7 @@ public class cofre : MonoBehaviour
     {
         if (other.CompareTag("Player") && comprobarColliders())
         {
+            controladorSonidos.Instance.EjecutarSonido(sonido);
             key.SetActive(false);
             datoJugador.addKey();
         }
