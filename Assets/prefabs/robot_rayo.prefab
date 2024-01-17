@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835430781831576969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.58, z: 0.36}
+  m_LocalPosition: {x: 0, y: 3.89, z: 0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5926300453993618133}
   - component: {fileID: 2218229605504617553}
   - component: {fileID: 6899323804020724392}
+  - component: {fileID: 6315234590490347732}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -59,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3594531781825282799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.16, z: 0}
-  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
+  m_LocalPosition: {x: 0.13, y: 2.92, z: 0}
+  m_LocalScale: {x: 0.5734955, y: 0.5734955, z: 0.5734955}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2003128750684207321}
@@ -159,11 +160,23 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6315234590490347732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594531781825282799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ddd8be9255c664fad612bf63367bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2037372511269297970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,15 +191,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.45
+      value: 0.8863639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.45
+      value: 0.8863639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.45
+      value: 0.8863639
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,11 +374,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f93209d20de145b628a227ed85fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 2
   player: {fileID: 0}
   enemyBullet: {fileID: 3594531781825282799}
   spawnPoint: {fileID: 5309244137749567572}
-  espeed: 5
+  espeed: 1000
 --- !u!4 &2003128750684207321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2b0cb77e6537a44188bef71f58a1f64, type: 3}

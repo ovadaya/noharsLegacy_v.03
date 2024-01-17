@@ -40,4 +40,6 @@ public class dispararCiclope : MonoBehaviour
         Destroy(bulletObj, 5f);
 
     }
+
+   
 }
