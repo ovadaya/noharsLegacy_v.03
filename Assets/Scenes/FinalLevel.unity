@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.093282185, g: 0.08368572, b: 0.104561694, a: 1}
+  m_IndirectSpecularColor: {r: 0.093282245, g: 0.08368582, b: 0.1045618, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8739,6 +8739,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: 2fba49ac88682964e8a10a3dfaa99790, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -6698462606073265060, guid: 2fba49ac88682964e8a10a3dfaa99790, type: 3}
       propertyPath: m_LocalScale.x
       value: 200
@@ -10195,6 +10199,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 39d3c88f62c6eb9439d6311be698e0de, type: 2}
+    - target: {fileID: 6507901977716847365, guid: 2fba49ac88682964e8a10a3dfaa99790, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6560815378695169779, guid: 2fba49ac88682964e8a10a3dfaa99790, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13161,7 +13169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491485224}
-  m_LocalRotation: {x: 0.124220625, y: -0.000000017598554, z: 0.0000000022031676, w: 0.9922547}
+  m_LocalRotation: {x: 0.124220625, y: 0.000000017598564, z: -0.0000000022031688, w: 0.9922547}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16163,7 +16171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948596452}
-  m_LocalRotation: {x: 0.16018224, y: -0.000000016984202, z: 0.0000000027561569, w: 0.9870875}
+  m_LocalRotation: {x: 0.16018224, y: 0.000000016984204, z: -0.000000002756157, w: 0.9870875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
