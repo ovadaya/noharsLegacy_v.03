@@ -33,11 +33,9 @@ public class oleadas : MonoBehaviour
         }
 
         sp = GameObject.FindGameObjectsWithTag("Spawners");
-        if(sp != null){
-            for(int i = 0; i < sp.Length; i++)
-            {
-                sp[i].SetActive(false);
-            }
+        for(int i = 0; i < sp.Length; i++)
+        {
+            sp[i].SetActive(false);
         }
     }
 
