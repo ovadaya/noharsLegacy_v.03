@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oleadas : MonoBehaviour
+public class oleadav2 : MonoBehaviour
 {
     public enum wState {siguiente, max};
     public wState wave = wState.siguiente;
