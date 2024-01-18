@@ -6420,7 +6420,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654185694}
-  m_LocalRotation: {x: 0.16018222, y: -0.000000025470568, z: 0.0000000041333035, w: 0.9870875}
+  m_LocalRotation: {x: 0.16018225, y: 0.000000023309845, z: -0.000000003782667, w: 0.9870875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17687,7 +17687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052709811029749500, guid: ebfa42b7f9e20394991c430105a9bfe1, type: 3}
       propertyPath: danio
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3052709811029749500, guid: ebfa42b7f9e20394991c430105a9bfe1, type: 3}
       propertyPath: "da\xF1o"
